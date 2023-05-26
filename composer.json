@@ -1,0 +1,20 @@
+{
+    "name": "skara/login",
+    "description": "login system with hashing for security",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Skara\\Login\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sezgin",
+            "email": "s.karaduman3880@gmail.com"
+        }
+    ],
+    "require": {
+        "ircmaxell/password-compat": "^1.0"
+    }
+}
