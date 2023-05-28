@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 23 mei 2023 om 13:59
+-- Gegenereerd op: 27 mei 2023 om 22:35
 -- Serverversie: 10.4.25-MariaDB
 -- PHP-versie: 8.1.10
 
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabelstructuur voor tabel `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `title`, `description`) VALUES
+(16, 'test', 'test test'),
+(17, 'sss', 'sss');
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `users`
 --
 
@@ -40,11 +60,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `reg_date`) VALUES
-(16, 'a', '$2y$10$c948h/m.0XwUPDPcdDeQ3u6QptSm1Ai0ySHfu.y7WZuJgp52TAm5.', 'a@a', '2023-05-16 19:04:05');
+(17, 'aa', '$2y$10$a4dGeEBphxURFhtgU0QR0uniFtjsof5RG1NUSdo8Q5rGNYMZZBgv.', 'aaaaaa@e', '2023-05-23 12:00:35'),
+(18, 'a', '$2y$10$GbrBckHO40Dlv8m0NCmPWOnneKHI3GuSJTWPj1tThySrV2XDc7pxq', 'c@c.com', '2023-05-26 19:50:31');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
+
+--
+-- Indexen voor tabel `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexen voor tabel `users`
@@ -57,10 +84,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT voor een tabel `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
